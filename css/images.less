@@ -1,6 +1,10 @@
 // Makielab Ltd // image styles //
 
 // Image treatments
+.logo {
+  width: 50%;
+}
+
 .dimmed {
   position: relative;
 }
@@ -24,8 +28,15 @@
 .team-img {
   width: 160px;
   padding: 20px 10px;
+  filter: gray; //for IE6-9
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+
+    &:hover, &:focus {
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+      -webkit-transition: all .6s ease;  // Transition for Webkit browsers
+    }
 
   @media screen and (min-width: 700px) {
     width: 200px;
