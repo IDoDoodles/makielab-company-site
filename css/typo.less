@@ -1,0 +1,76 @@
+// Makielab Ltd // typography //
+
+
+// Fonts
+@body-font-family: 'ABeeZee', sans-serif;
+@heading-font-family: 'McLaren', cursive;
+
+// Text Colors
+@text-color: #707070;
+@text-color-dark: #444444;
+@text-color-subtle: #dddddd;
+
+// Links
+@link-color: blue;
+@link-color-hover: darken(@link-color, 3%);
+
+// Font Styles
+body, p {
+  font-family: @body-font-family;
+  color: text-color;
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  color: @text-color-dark;
+  font-family: @heading-font-family;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: @text-color-subtle;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title-overlay {
+  width: 100%;
+  color: red;
+  z-index: 20;
+  position: relative;
+  vertical-align: middle;
+  font-size: 2.4rem;
+
+  @media screen and (min-width: 500px) {
+    font-size: 3rem;
+    color: yellow;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 4rem;
+    color: pink;
+  }
+
+  @media screen and (min-width: 700px) {
+    font-size: 5rem;
+    color: pink;
+  }
+}
+
+.intro-sub {
+  margin-top: 1rem;
+}
