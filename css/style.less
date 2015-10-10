@@ -1,26 +1,85 @@
 // Makielab Ltd // styles //
 
+@import "variables"; // variables.less
+@import "typo"; // typo.less
+@import "images"; // images.less
 
-// Typography
-body, p {
-  font-family: @body-font;
-  color: text-color;
-  font-size: 1.4rem;
+
+// Layout
+body {
+  margin: 0;
 }
 
-h1, h2, h3 {
-  color: @text-color-dark;
-  margin-top: 2rem;
+section {
+  width: 100%;
 }
 
-h1 {
-  font-size: 3rem;
+.container {
+  padding: 0 20px;
+  background: paleblue;
 }
 
-h2 {
-  font-size: 2.4rem
+.block {
+  display:block;
 }
 
-h3 {
-  font-size: 1.8rem;
+.inline-block {
+  display: inline-block;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.third-width {
+  padding-right: 1%;
+  width: 100%;
+  text-align: center;
+
+  @media screen and (min-width: 600px) {
+    width: 30%;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 995px) {
+    width: 32%;
+    text-align: left;
+  }
+}
+
+// homepage header section
+.header-home {
+  background: url(../media/site/header.jpg) no-repeat center;
+  background-size: cover;
+  vertical-align: top;
+}
+
+//intro section
+.intro {
+  background: @ui-site-color-4;
+}
+
+// Team section
+.team {
+  background-color: @base-background-color;
+}
+
+.team, .intro, .press {
+  padding: 20px 0;
+}
+
+// press secion
+.press {
+  background: @ui-site-color-5;
+
+    h2 {
+      color: @text-color-dark;
+    }
+}
+
+// Footer
+footer {
+  bottom: 0;
+  padding: 20px 0 10px;
+  background: @ui-site-color-3;
 }
