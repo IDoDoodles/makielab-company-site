@@ -43,11 +43,57 @@
   }
 }
 
-.makielab-bio-img {
+.bio-img {
   display: none;
 
   @media screen and (min-width: 700px) {
     display: inline-block;
     width: 95%;
   }
+}
+
+.press-img {
+  width: 80px;
+  display: inline-block;
+  padding: 0 1%;
+
+    @media screen and (min-width: 500px) {
+      width: 120px;
+    }
+}
+
+.social-icon {
+  display: inline-block;
+
+    &:hover {
+      filter: brightness(.5);
+      -webkit-filter: brightness(.5);
+    }
+}
+
+.fb, .tw, .in {
+  width: 60px;
+  height: 60px;
+  padding: 0 5px 10px;
+
+  @media screen and (min-width: 600px) {
+    width: 40px;
+    height: 40px;
+    padding: 0 5px 10px;
+  }
+}
+
+.fb {
+  background: url("../media/site/icons/facebook.svg");
+  background-size: cover;
+}
+
+.tw {
+  background: url("../media/site/icons/twitter.svg");
+  background-size: cover;
+}
+
+.in {
+  background: url("../media/site/icons/instagram.svg");
+  background-size: cover;
 }
