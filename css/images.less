@@ -35,7 +35,9 @@
     &:hover, &:focus {
       filter: grayscale(0%);
       -webkit-filter: grayscale(0%);
-      -webkit-transition: all .6s ease;  // Transition for Webkit browsers
+      -webkit-transition: all 0.5s ease;  // Transition for Webkit browsers
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
     }
 
   @media screen and (min-width: 700px) {
@@ -45,10 +47,21 @@
 
 .bio-img {
   display: none;
+  float: right;
 
   @media screen and (min-width: 700px) {
     display: inline-block;
-    width: 95%;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 900px) {
+    display: inline-block;
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    display: inline-block;
+    width: 75%;
   }
 }
 
@@ -62,21 +75,25 @@
     }
 }
 
-.social-icon {
+.social-icon, .makies-sitelink {
   display: inline-block;
 
     &:hover {
-      filter: brightness(.5);
-      -webkit-filter: brightness(.5);
+      filter: brightness(2);
+      -webkit-filter: brightness(2);
     }
 }
 
-.fb, .tw, .in {
+.fb, .tw, .in, .email, .pin {
   width: 60px;
   height: 60px;
-  padding: 0 5px 10px;
+  padding: 0;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 500px) {
+    padding: 0 5px 10px;
+  }
+
+  @media screen and (min-width: 700px) {
     width: 40px;
     height: 40px;
     padding: 0 5px 10px;
@@ -96,4 +113,32 @@
 .in {
   background: url("../media/site/icons/instagram.svg");
   background-size: cover;
+}
+
+.email {
+  background: url("../media/site/icons/email.svg");
+  background-size: cover;
+}
+
+.pin {
+  background: url("../media/site/icons/pin.svg");
+  background-size: cover;
+}
+
+
+.makies-sitelink {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: block;
+  background: url("../media/site/makies-sitelink-img.svg");
+  background-size: cover;
+  width: 200px;
+  height: 120px;
+  padding: 0 10px 0 0;
+
+    @media screen and (min-width: 700px) {
+    float: right;
+    margin-top: 0;
+  }
 }
